@@ -21,10 +21,10 @@ input,button,textarea,select { font:inherit; }
   font-weight:700; font-size:18px; color:var(--accent); text-decoration:none; letter-spacing:.08em; }
 .tagline { color:var(--muted); font-size:13px; letter-spacing:.02em;
   font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; white-space:nowrap; }
-.theme-btn { border:1px solid var(--line); background:none; color:var(--muted);
+.theme-btn { margin-left:auto; border:1px solid var(--line); background:none; color:var(--muted);
   border-radius:999px; padding:6px 12px; font-size:13px; cursor:pointer; white-space:nowrap; }
 .theme-btn:hover { color:var(--accent); border-color:var(--accent); }
-.searchbox { margin-left:auto; position:relative; }
+.searchbox { position:relative; }
 .searchbox input { width:240px; padding:8px 14px; font-size:14px; border:1px solid var(--line);
   border-radius:999px; outline:none; background:var(--bg); color:var(--ink);
   font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; }
