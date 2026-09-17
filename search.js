@@ -32,6 +32,18 @@
   var initialTheme = (savedTheme === 'dark' || savedTheme === 'light') ? savedTheme : effTheme();
   giscusTheme(initialTheme);
   setTimeout(function () { giscusTheme(initialTheme); }, 1800);
+  // giscus iframe 懒加载：挂载/加载完成时补推当前主题，否则暗色下评论区停在亮色
+  new MutationObserver(function () {
+    var f = document.querySelector('iframe.giscus-frame');
+    if (f && !f.dataset.themeBound) {
+      f.dataset.themeBound = '1';
+      f.addEventListener('load', function () {
+        giscusTheme(effTheme());
+        setTimeout(function () { giscusTheme(effTheme()); }, 600);
+        setTimeout(function () { giscusTheme(effTheme()); }, 1600);
+      });
+    }
+  }).observe(document.body, { childList: true, subtree: true });
   if (themeBtn) themeBtn.addEventListener('click', function () {
     setTheme(effTheme() === 'dark' ? 'light' : 'dark', true);
   });
