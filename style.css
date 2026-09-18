@@ -50,7 +50,8 @@ input,button,textarea,select { font:inherit; }
   padding:11px 8px; cursor:pointer; font-size:14.5px; font-weight:600; color:var(--ink); border-radius:8px; }
 .sidebar summary::-webkit-details-marker { display:none; }
 .sidebar summary::after { content:"+"; color:var(--muted); font-size:15px; }
-.sidebar details[open] summary::after { content:"−"; }
+.sidebar > nav > details[open] > summary::after,
+.sidebar details.s-g[open] > summary::after { content:"−"; }
 .sidebar summary:hover { color:var(--accent); }
 .s-count { color:var(--muted); font-size:12px; font-weight:400; margin-left:6px; }
 .sidebar summary { gap:6px; }
