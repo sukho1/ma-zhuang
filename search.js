@@ -9,8 +9,7 @@
   var rootEl = document.documentElement;
   function effTheme() {
     if (rootEl.classList.contains('dark')) return 'dark';
-    if (rootEl.classList.contains('light')) return 'light';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light'; // 默认亮色：暗色仅手动切换后记忆
   }
   function giscusTheme(t) {
     var f = document.querySelector('iframe.giscus-frame');

@@ -144,12 +144,7 @@ footer.foot a { color:var(--muted); }
   .sidebar.open { transform:none; box-shadow:0 0 40px rgba(0,0,0,.18); }
   article { padding:24px 22px 30px; }
 }
-/* 手动强制暗色（.dark）与系统暗色（媒体查询，排除手动 .light）双通道 */
+/* 暗色仅经手动切换（.dark）生效，站点默认亮色 */
 :root.dark { color-scheme:dark; --ink:#d8d2c7; --bg:#221f1a; --card:#2c2822; --accent:#c99b62; --muted:#948c7d; --line:#3d3830; }
 :root.dark th, :root.dark code, :root.dark pre { background:#332e27; }
 :root.dark .hits { box-shadow:0 8px 28px rgba(0,0,0,.45); }
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) { color-scheme:dark; --ink:#d8d2c7; --bg:#221f1a; --card:#2c2822; --accent:#c99b62; --muted:#948c7d; --line:#3d3830; }
-  :root:not(.light) th, :root:not(.light) code, :root:not(.light) pre { background:#332e27; }
-  :root:not(.light) .hits { box-shadow:0 8px 28px rgba(0,0,0,.45); }
-}
