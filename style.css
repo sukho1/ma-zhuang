@@ -60,8 +60,10 @@ input,button,textarea,select { font:inherit; }
   color:var(--muted); text-decoration:none; border-left:2px solid transparent; border-radius:0 8px 8px 0; }
 .sidebar li a:hover { color:var(--accent); background:var(--bg); }
 .sidebar li a.current { color:var(--accent); font-weight:600; border-left-color:var(--accent); background:var(--bg); }
-.s-group { margin:10px 0 2px; padding:3px 10px 1px 20px; font-size:12px;
-  color:var(--muted); letter-spacing:.06em; }
+/* 二级分组：可折叠，默认收起；当前文章所在分组自动展开 */
+.sidebar details.s-g { border-bottom:none; }
+.sidebar details.s-g summary { padding:6px 8px 6px 14px; font-size:13px; font-weight:500; color:var(--muted); }
+.sidebar details.s-g[open] summary, .sidebar details.s-g summary:hover { color:var(--accent); }
 .gb-link { display:flex; align-items:center; gap:8px; margin:14px 8px 4px; padding:9px 12px;
   border:1px solid var(--line); border-radius:10px; text-decoration:none; color:var(--ink);
   font-size:13.5px; font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; }
