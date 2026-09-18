@@ -1,6 +1,6 @@
 :root { --ink:#2b2620; --bg:#faf7f2; --card:#fff; --accent:#8a5a2b; --muted:#8a8377; --line:#e8e1d5; --head-h:58px; }
 * { box-sizing:border-box; }
-:root { color-scheme:light; }
+:root { color-scheme:only light; }
 * { scrollbar-width:thin; scrollbar-color:var(--muted) transparent; }
 ::-webkit-scrollbar { width:9px; height:9px; }
 ::-webkit-scrollbar-track { background:transparent; }
@@ -157,7 +157,9 @@ footer.foot a { color:var(--muted); }
   article { padding:24px 22px 30px; }
   .toc-list { columns:1; }
 }
-/* 暗色仅经手动切换（.dark）生效，站点默认亮色 */
+/* 暗色仅经手动切换（.dark）生效，站点默认亮色；亮色态声明 only light，
+   禁用浏览器（Edge/Chrome 自动深色）对亮色页面的强制压暗 */
+:root.light { color-scheme:only light; }
 :root.dark { color-scheme:dark; --ink:#d8d2c7; --bg:#221f1a; --card:#2c2822; --accent:#c99b62; --muted:#948c7d; --line:#3d3830; }
 :root.dark th, :root.dark code, :root.dark pre { background:#332e27; }
 :root.dark .hits { box-shadow:0 8px 28px rgba(0,0,0,.45); }
