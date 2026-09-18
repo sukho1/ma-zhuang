@@ -60,6 +60,8 @@ input,button,textarea,select { font:inherit; }
   color:var(--muted); text-decoration:none; border-left:2px solid transparent; border-radius:0 8px 8px 0; }
 .sidebar li a:hover { color:var(--accent); background:var(--bg); }
 .sidebar li a.current { color:var(--accent); font-weight:600; border-left-color:var(--accent); background:var(--bg); }
+.s-group { margin:10px 0 2px; padding:3px 10px 1px 20px; font-size:12px;
+  color:var(--muted); letter-spacing:.06em; }
 .gb-link { display:flex; align-items:center; gap:8px; margin:14px 8px 4px; padding:9px 12px;
   border:1px solid var(--line); border-radius:10px; text-decoration:none; color:var(--ink);
   font-size:13.5px; font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; }
@@ -115,6 +117,13 @@ hr { border:none; border-top:1px solid var(--line); margin:2em 0; }
   color:var(--muted); font-size:13.5px; line-height:1.7; margin-top:6px; }
 .heat { color:var(--accent); font-size:12px; font-weight:400; margin-left:6px; white-space:nowrap; }
 .count { color:var(--muted); font-size:13px; font-weight:400; font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; }
+.g-name { font-size:16px; margin:20px 0 10px; }
+.g-name .count { font-size:12.5px; }
+.toc-h { font-size:20px; margin:26px 0 4px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+.toc-list { list-style:none; margin:0 0 10px; padding:0; columns:2; column-gap:30px; }
+.toc-list li { break-inside:avoid; }
+.toc-list a { display:block; padding:3px 0; text-decoration:none; color:var(--ink); font-size:14px; line-height:1.6; }
+.toc-list a:hover { color:var(--accent); }
 
 /* ---- about box ---- */
 .intro { margin-top:28px; background:var(--card); border:1px solid var(--line);
@@ -143,6 +152,7 @@ footer.foot a { color:var(--muted); }
     transform:translateX(-102%); transition:transform .2s ease; max-height:none; }
   .sidebar.open { transform:none; box-shadow:0 0 40px rgba(0,0,0,.18); }
   article { padding:24px 22px 30px; }
+  .toc-list { columns:1; }
 }
 /* 暗色仅经手动切换（.dark）生效，站点默认亮色 */
 :root.dark { color-scheme:dark; --ink:#d8d2c7; --bg:#221f1a; --card:#2c2822; --accent:#c99b62; --muted:#948c7d; --line:#3d3830; }
